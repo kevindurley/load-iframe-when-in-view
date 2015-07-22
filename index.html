@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script src="js/loadiframewheninview.js"></script>
+
+
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#a6a6a6;
+}
+
+#header {
+    display: block;
+    height: 200px;
+    width: 100%;
+    background-color:#e0e0e0;
+}
+
+#footer {
+    display: block;
+    height: 10px;
+    width: 100%;
+    background-color:#e0e0e0;
+}
+
+div.external iframe {
+    display: block; 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px;
+    width:200px;
+    height:400px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div>
+    <div class="itemHolder">
+        <div class="internal">1</div>
+        <div class="external"><iframe src="" data-src="http://www.bbc.co.uk" frameborder="0" scrolling="no" allowfullscreen=""></iframe></div>
+    </div>
+    <div class="itemHolder">
+        <div class="internal">1</div>
+        <div class="external"><iframe src="" data-src="http://www.samsung.com" frameborder="0" scrolling="no" allowfullscreen=""></iframe></div>
+    </div>
+    <div class="itemHolder">
+        <div class="internal">1</div>
+        <div class="external"><iframe src="" data-src="http://www.bbc.co.uk" frameborder="0" scrolling="no" allowfullscreen=""></iframe></div>
+    </div>
+    <div class="itemHolder">
+        <div class="internal">1</div>
+        <div class="external"><iframe src="" data-src="http://www.samsung.com" frameborder="0" scrolling="no" allowfullscreen=""></iframe></div>
+    </div>
+    <div class="itemHolder">
+        <div class="internal">1</div>
+        <div class="external"><iframe src="" data-src="http://www.bbc.co.uk" frameborder="0" scrolling="no" allowfullscreen=""></iframe></div>
+    </div>
+    <div class="itemHolder">
+        <div class="internal">1</div>
+        <div class="external"><iframe src="" data-src="http://www.samsung.com" frameborder="0" scrolling="no" allowfullscreen=""></iframe></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+    // options
+    // debug: false,
+    // percentageToBeVisible: 25,
+    // unloadIframeWhenOutOfView: true
+    $('.external iframe').loadIframeWhenInView({
+        debug: false,
+        percentageToBeVisible: 10,
+        unloadIframeWhenOutOfView: true
+    });
+
+});
+
+</script>
+
+<div id="footer"></div>
+
+</body>
+</html>
