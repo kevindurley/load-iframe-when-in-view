@@ -1,6 +1,11 @@
 # load-iframe-when-in-view
 Load iframes src attribute only when they scroll into view.
 
+## example
+
+http://durley.net/load-iframe-when-in-view/
+
+## usage
 
 1) Copy repository
 
